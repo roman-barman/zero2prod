@@ -1,0 +1,12 @@
+### GET request to health check
+GET  http://127.0.0.1:8000/health_check
+
+###
+
+### POST request to health check
+POST  http://127.0.0.1:8000/subscriptions
+Content-Type: application/x-www-form-urlencoded
+
+name=le%20guin&email=ursula_le_guin%40gmail.com
+
+###
