@@ -36,9 +36,7 @@ pub async fn subscribe(form: web::Form<FormData>, pool: web::Data<PgPool>) -> Ht
     .instrument(query_span)
     .await
     {
-        Ok(_) => {
-            HttpResponse::Ok().finish()
-        }
+        Ok(_) => HttpResponse::Ok().finish(),
         Err(err) => {
             tracing::error!("Failed to execute query: {:?}", err);
             HttpResponse::InternalServerError().finish()
