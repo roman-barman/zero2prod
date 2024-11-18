@@ -13,15 +13,15 @@ name = "zero2prod"
 [dependencies]
 actix-web = "4"
 tokio = { version = "1.41.0", features = ["macros", "rt-multi-thread"] }
-serde = { version = "1" , features = [ "derive" ]}
+serde = { version = "1" , features = ["derive"]}
 config = "0.14"
-uuid = { version = "1" , features = [ "v4" ] }
-chrono = { version = "0.4.22" , default-features = false , features = [ "clock" ] }
-tracing = { version = "0.1" , features = [ "log" ] }
+uuid = { version = "1" , features = ["v4"] }
+chrono = { version = "0.4.22" , default-features = false , features = ["clock"] }
+tracing = { version = "0.1" , features = ["log"] }
 tracing-subscriber = { version = "0.3" , features = ["registry", "env-filter"] }
 tracing-bunyan-formatter = "0.3"
 tracing-log = "0.2"
-secrecy = { version = "0.8" , features = [ "serde" ] }
+secrecy = { version = "0.8" , features = ["serde"] }
 tracing-actix-web = "0.7"
 serde-aux = "4"
 unicode-segmentation = "1"
@@ -39,8 +39,12 @@ features = [
     "migrate"
 ]
 
+[dependencies.reqwest]
+version = "0.12"
+default-features = false
+features = ["json", "rustls-tls"]
+
 [dev-dependencies]
-reqwest = "0.12"
 claims = "0.7"
 fake = "2.9"
 quickcheck = "1.0.3"
