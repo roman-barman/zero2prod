@@ -31,6 +31,7 @@ thiserror = "1"
 anyhow = "1"
 base64 = "0.22"
 argon2 = { version = "0.5" , features = ["std"] }
+actix-web-flash-messages = { version = "0.5" , features = ["cookies"] }
 urlencoding = "2"
 htmlescape = "0.3"
 hmac = { version = "0.12", features = ["std"] }
