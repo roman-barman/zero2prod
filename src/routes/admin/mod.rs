@@ -5,3 +5,6 @@ pub use password::*;
 
 mod logout;
 pub use logout::log_out;
+
+mod newsletters;
+pub use newsletters::*;
